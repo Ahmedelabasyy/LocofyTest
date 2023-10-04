@@ -1,0 +1,14 @@
+{
+  "locofyConfig": {
+    "project": "Sample_FickleFlight_1",
+    "id": "651d1c49ed6a97324790ea80",
+    "framework": "react",
+    "typescript": false,
+    "styling": "Tailwind",
+    "unit": "px",
+    "naming": "Pascal Case",
+    "path": "public/",
+    "componentsPath": "d:\\locofy\\src\\components",
+    "screensPath": "d:\\locofy\\src\\pages"
+  }
+}
