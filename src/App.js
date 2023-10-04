@@ -54,7 +54,7 @@ function App() {
   }, [pathname]);
 
   return (
-    <Routes basename={window.location.pathname || ''}>
+    <Routes >
       <Route path="/" element={<Homepage />} />
       <Route path="/results-page" element={<ResultsPage />} />
       <Route path="/hotels-page" element={<HotelsPage />} />
