@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/locofyTest/static/css/main.56af57f5.css",
+    "main.js": "/locofyTest/static/js/main.a058d40e.js",
+    "index.html": "/locofyTest/index.html",
+    "main.56af57f5.css.map": "/locofyTest/static/css/main.56af57f5.css.map",
+    "main.a058d40e.js.map": "/locofyTest/static/js/main.a058d40e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.56af57f5.css",
+    "static/js/main.a058d40e.js"
+  ]
+}
