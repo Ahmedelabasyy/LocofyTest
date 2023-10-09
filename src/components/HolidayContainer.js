@@ -1,7 +1,5 @@
 import { useEffect } from "react";
 import RecommendedHolidayCardContaine from "./RecommendedHolidayCardContaine";
-import { useState } from "react";
-import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchHolidays } from "../features/slices/holidaysSlice";
 
