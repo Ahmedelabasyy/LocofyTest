@@ -13,6 +13,7 @@ const FlightContainer = ({
   propRight,
   propLeft,
 }) => {
+  console.log("turkish", turkish)
   const turkishIconStyle = useMemo(() => {
     return {
       transform: propTransform,

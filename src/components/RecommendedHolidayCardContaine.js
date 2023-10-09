@@ -5,7 +5,7 @@ const RecommendedHolidayCardContaine = ({
   packagePrice,
 }) => {
   return (
-    <button className="cursor-pointer [border:none] py-0 px-4 bg-[transparent] flex-1 flex flex-col box-border items-center justify-start min-w-[230px] w-3/12 md:w-6/12 md:mb-8 sm:min-w-[250px] sm:w-full sm:mb-8">
+    <button  className="cursor-pointer [border:none] py-0 px-4 bg-[transparent] flex-1 flex flex-col box-border items-center justify-start min-w-[230px] w-3/12 md:w-6/12 md:mb-8 sm:min-w-[250px] sm:w-full sm:mb-8">
       <img
         className="self-stretch relative rounded-t-3xs rounded-b-none max-w-full overflow-hidden h-[242px] object-cover"
         alt=""

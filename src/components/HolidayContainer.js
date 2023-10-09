@@ -1,6 +1,18 @@
+import { useEffect } from "react";
 import RecommendedHolidayCardContaine from "./RecommendedHolidayCardContaine";
+import { useState } from "react";
+import axios from "axios";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchHolidays } from "../features/slices/holidaysSlice";
 
 const HolidayContainer = () => {
+  const {holidays} = useSelector(state => state.holidays);
+  const dispatch = useDispatch();
+  console.log("holidays", holidays);
+
+  useEffect(() => {
+    dispatch(fetchHolidays());
+  }, [dispatch])
   return (
     <div className="self-stretch flex flex-col items-start justify-center gap-[24px] text-left text-11xl text-darkslategray-300 font-roboto">
       <div className="self-stretch flex flex-row items-center justify-start">
@@ -19,30 +31,15 @@ const HolidayContainer = () => {
         </button>
       </div>
       <div className="self-stretch flex flex-row items-start justify-start ml-[-16px] mr-[-16px] md:ml-[-16px] md:mr-[-16px] md:flex-wrap">
-        <RecommendedHolidayCardContaine
-          packageImage="/unsplash5mv818tzxeo@2x.png"
-          packageDestination="Bali"
-          packageDuration="4D3N"
-          packagePrice="$899"
+        {holidays?.map((holiday, index) => (
+          <RecommendedHolidayCardContaine
+          key={index}
+          packageImage={holiday.packageImage}
+          packageDestination={holiday.packageDestination}
+          packageDuration={holiday.packageDuration}
+          packagePrice={holiday.packagePrice}
         />
-        <RecommendedHolidayCardContaine
-          packageImage="/switzerlandimage@2x.png"
-          packageDestination="Swiss"
-          packageDuration="6D5N"
-          packagePrice="$900"
-        />
-        <RecommendedHolidayCardContaine
-          packageImage="/boracayimage@2x.png"
-          packageDestination="Boracay"
-          packageDuration="5D4N"
-          packagePrice="$699"
-        />
-        <RecommendedHolidayCardContaine
-          packageImage="/palawanimage@2x.png"
-          packageDestination="Palawan"
-          packageDuration="4D3N"
-          packagePrice="$789"
-        />
+        ))} 
       </div>
       <div className="rounded-12xl bg-white w-[199.89px] hidden flex-row items-start justify-start gap-[10px] text-right text-lg text-cornflowerblue-300 md:flex md:[mrgin-top:16px]">
         <div className="relative tracking-[0.04em] font-medium inline-block w-[165.89px] shrink-0 md:w-auto">
